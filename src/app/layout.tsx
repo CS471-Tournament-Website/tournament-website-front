@@ -18,7 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <UserProvider>
-          <NavBar />
+          <div className="absolute w-full bg-white">
+            <NavBar />
+          </div>
           {children}
         </UserProvider>
       </body>

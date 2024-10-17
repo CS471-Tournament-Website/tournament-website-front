@@ -1,5 +1,5 @@
 import CountdownTimer from "@/components/CounterDownTimer";
-import NoTour from "@/components/noTour";
+import NoTour from "@/components/NoTour";
 import TournamentDetails from "@/components/TournamentDetails";
 
 export default function Home() {

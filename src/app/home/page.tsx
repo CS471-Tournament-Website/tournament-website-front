@@ -1,29 +1,37 @@
-import CountdownTimer from "@/components/CounterDownTimer";
-import NoTour from "@/components/NoTour";
-import TournamentDetails from "@/components/TournamentDetails";
+"use client"
+
+import Footer from "@/components/Footer";
+import CountdownTimer from "./components/CounterDownTimer";
+import NoTour from "./components/NoRecentTour";
+import TournamentSection from "./components/TournamentSection";
 
 export default function Home() {
-  const tournament = true;
+  const isTournamentActive = true;
 
   return (
     <div className="h-screen">
       <div
-        className="w-svh"
+        className="h-[85vh]"
         style={{
           backgroundImage: `url('/background.svg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        {tournament ? <CountdownTimer date={"Enter the date"} /> : <NoTour />}
-        <div className="text-end -translate-y-5 pr-6 italic">
+        <div className="h-full flex items-center justify-center">
+          {isTournamentActive ? <CountdownTimer date={"2024-12-12T10:00:00"} /> : <NoTour />}
+        </div>
+        <div className="absolute bottom-28 right-6 italic text-gray-600 bg-white bg-opacity-50 px-2 py-1 rounded">
           pattern by @designstuff
         </div>
       </div>
-      <div className="text-center text-4xl font-semibold tracking-wider bg-secondary-color text-white py-7">
-        Welcome to osu! Thailand Tournament
+      <div className="h-[15vh] bg-secondary-color flex items-center justify-center">
+        <div className="text-center text-4xl font-semibold tracking-wider text-white">
+          Welcome to osu! Thailand Tournament
+        </div>
       </div>
-      <div className="w-svh px-36 py-16">{tournament ? <TournamentDetails /> : ""}</div>
+      {isTournamentActive ? <TournamentSection /> : ""}
+      <Footer />
     </div>
   );
 }

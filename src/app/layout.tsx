@@ -1,8 +1,9 @@
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import React from 'react';
-import { UserProvider } from '../../contexts/UserContext';
-import "../globals.css";
+import { UserProvider } from '../contexts/UserContext';
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",

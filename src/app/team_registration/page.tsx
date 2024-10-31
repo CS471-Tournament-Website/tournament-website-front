@@ -1,6 +1,6 @@
 "use client";
 
-import Conditions from "@/app/create-team/components/conditions";
+import Conditions from "@/app/team_registration/components/conditions";
 import Register from "@/app/team_registration/components/register";
 
 export default function CreateTeam() {

@@ -9,9 +9,11 @@ interface BaseLayoutProps {
   className?: string;
 }
 
-export default function BaseLayout({ 
-  children
-}: BaseLayoutProps) {
+export default function BaseLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <div className="min-h-screen">
       <div className="absolute w-full bg-white">

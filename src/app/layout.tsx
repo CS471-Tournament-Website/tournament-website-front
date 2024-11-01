@@ -1,4 +1,3 @@
-import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import React from 'react';
 import { UserProvider } from '../contexts/UserContext';

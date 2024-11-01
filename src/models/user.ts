@@ -4,18 +4,18 @@ export class UserModel implements User {
   constructor(
     private _username: User["username"],
     private _role: User["role"],
-    private _iconLink: User["iconLink"]
+    private _profileLink: User["profileLink"]
   ) {}
 
-  public get username(): User["username"] {
+  get username(): string {
     return this._username;
   }
 
-  public get role(): User["role"] {
+  get role(): "Spectator" | "Participant" | "Staff" {
     return this._role;
   }
 
-  public get iconLink(): User["iconLink"] {
-    return this._iconLink;
+  get profileLink(): string | null {
+    return this._profileLink;
   }
 }

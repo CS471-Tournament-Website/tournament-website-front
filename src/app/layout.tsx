@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import React from 'react';
@@ -19,9 +18,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <UserProvider>
-          <div className="absolute w-full bg-white">
-            <NavBar />
-          </div>
           {children}
         </UserProvider>
       </body>

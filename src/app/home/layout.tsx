@@ -3,12 +3,6 @@
 import NavBar from "@/components/NavBar";
 import React from 'react';
 
-interface BaseLayoutProps {
-  children: React.ReactNode;
-  showNav?: boolean;
-  className?: string;
-}
-
 export default function BaseLayout({
   children,
 }: Readonly<{

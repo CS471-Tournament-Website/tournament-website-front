@@ -20,11 +20,16 @@ export default function QualfierLobby() {
       <div className="flex py-10 justify-center text-2xl font-bold">
         Qualifier Lobby
       </div>
-      <div className="-mt-4 flex justify-center">
-        <CreateLobbyForm />
-      </div>
-      <div className="py-5">
-        <LobbyCardList />
+      <div className="grid grid-cols-[1fr_2fr_1fr]">
+        <div></div>
+        <div className="py-5 space-y-4">
+          <div className="-mt-4">
+            <CreateLobbyForm />
+          </div>
+          <div>
+            <LobbyCardList />
+          </div>
+        </div>
       </div>
     </div>
   );

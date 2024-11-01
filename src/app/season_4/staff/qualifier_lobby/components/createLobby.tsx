@@ -60,8 +60,8 @@ const CreateLobbyForm = () => {
     <Card className="w-full max-w-4xl p-4 pt-7">
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex items-center gap-4">
-            <label htmlFor="lobbyName" className="text-sm font-bold w-28">
+          <div className="flex gap-4">
+            <label htmlFor="lobbyName" className="text-base font-bold w-28">
               Lobby Name
             </label>
             <Input
@@ -69,13 +69,14 @@ const CreateLobbyForm = () => {
               placeholder="e.g. TEC3 Qualifier Lobby T05 "
               value={formData.lobbyName}
               onChange={(e) => setFormData({ ...formData, lobbyName: e.target.value })}
+              className="text-base"
             />
           </div>
 
           <div className="flex gap-x-10">
             <div className="flex items-center gap-4">
               <div className="w-28">
-                <label htmlFor="startTime" className="text-sm font-bold block">
+                <label htmlFor="startTime" className="text-base font-bold block">
                   Start Time
                 </label>
                 <span className="text-xs text-gray-500">
@@ -93,7 +94,7 @@ const CreateLobbyForm = () => {
 
             <div className="flex items-center gap-4">
               <div className="w-28">
-                <label htmlFor="endTime" className="text-sm font-bold block">
+                <label htmlFor="endTime" className="text-base font-bold block">
                   End Time
                 </label>
                 <span className="text-xs text-gray-500">
@@ -110,7 +111,7 @@ const CreateLobbyForm = () => {
             </div>
           </div>
 
-          <div className="flex h-2 items-center">
+          <div className="flex h-4 items-center">
             {error && (
               <p className="text-sm text-red-500">{error}</p>
             )}
